@@ -12,7 +12,9 @@ xdg-utils \
 ImageMagick && \
 mkdir /opt/calibre
 
-ARG BUILD_DATE ARG VCS_REF LABEL org.label-schema.build-date=$BUILD_DATE \
+ARG BUILD_DATE
+ARG VCS_REF
+LABEL org.label-schema.build-date=$BUILD_DATE \
 	org.label-schema.docker.cmd="docker run --detach --publish 3690:3690 --volume $PWD:/var/opt/svn garethflowers/svn-server" \
 	org.label-schema.description="SVN Server" \
 	org.label-schema.name="svn-server" \
